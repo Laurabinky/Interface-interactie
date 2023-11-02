@@ -1,14 +1,38 @@
+/* Antenna lettertype  */
+@font-face {
+  font-family: Ford Antenna;
+  src: url(../fonts/ford-antenna-regular.woff2);
+}
+@font-face {
+  font-family: Ford Antenna;
+  src: url(../fonts/ford-antenna-cond-bold.woff2);
+}
+@font-face {
+  font-family: Ford Antenna;
+  src: url(../fonts/ford-antenna-cond-medium.woff2);
+}
+
+/* Roboto letterype */
+@font-face {
+  font-family: Roboto;
+  src: url(../fonts/roboto-400.woff);
+}
+@font-face {
+  font-family: Roboto;
+  src: url(../fonts/roboto-700.woff);
+}
+
 /**************/
 /* CSS REMEDY */
 /**************/
 
-/* naar een idee van Jen Simmons */
 *, *::after, *::before {
   box-sizing:border-box;  
 }
 
 body {
   margin:0;
+  font-family: Ford antenna, Roboto, sans-serif;
 }
 
 button:not([disabled]) {
@@ -28,8 +52,9 @@ img {
 /*********************/
 
 :root {
-  --color-headings:crimson
-  /* ... */
+  --color-headings:crimson;
+  --dashboard: #293133;
+  --bg-m-paneel: lightgrey;
 
 }
 
@@ -45,6 +70,55 @@ h1 {
   color:var(--color-headings);
 }
 
-/* ... */
+article {
+  background-color: var(--dashboard);
+  margin: 1em;
+
+
+  display: flex;
+}
+
+/* Grijze blob */
+article > img{
+  width: 40em;
+
+  position: relative;
+}
+
+/* Zwarte blob */
+article >section:nth-of-type(1) img:nth-of-type(2){
+  width: 40em;
+
+  position: absolute;
+  top: 20px;
+  left: 45px;
+}
+/* stuk met de snelheidsmeter */
+article > section:nth-of-type(1) img:nth-of-type(3){
+  width: 15em;  
+
+  position: absolute;
+  top: 65px;
+  left: 125px;
+}
+
+/* Stuur */
+article > section:nth-of-type(1) img:nth-of-type(5){
+  width: 25em;
+
+  position: absolute;
+  top: 25px;
+  left: 30px;
+}
+
+/* Paneel van de knoppen */
+
+
+
+/* Het stuur en de knopjes ernaast */
+
+/* Draaiknoppen op het middelste paneel */
+
+/* De versnellingsbak */
 
 
