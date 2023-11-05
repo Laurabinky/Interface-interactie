@@ -71,63 +71,70 @@ h1 {
 }
 
 article {
-  /* background-color: var(--dashboard); */
   margin: 1em;
+  justify-content: center;
 
 
-  display: flex;
+  display: grid;
+  grid-template-rows: 26em 10em 25em;
+  grid-template-columns: 30em 1fr 1fr;
+}
+
+/* Gif van de weg */
+article > img:nth-of-type(1){
+  width: 100em;
+  
+  grid-row-start: 1;
+  grid-column-start: 1;
+  grid-column-end: -1;
+
 }
 
 /* Dashboard Ka*/
-article > img:nth-of-type(1){
+article > img:nth-of-type(2){
   width: 100em;
 
-  position: relative;
+  grid-row-start: 2;
+  grid-column-start: 1;
+  grid-column-end: -1;
 }
 
-/* Middenpaneel Ka */
-article > img:nth-of-type(2){
-  width: 45em;
-
-  position: absolute;
-  top: 4.8em;
-  left: 3.2em;
-}
-
-/* Zwarte blob */
-article >section:nth-of-type(1) img:nth-of-type(2){
-  width: 40em;
-
-  position: absolute;
-  top: 20px;
-  left: 45px;
-}
-/* stuk met de snelheidsmeter */
-article > section:nth-of-type(1) img:nth-of-type(3){
-  width: 15em;  
-
-  position: absolute;
-  top: 65px;
-  left: 125px;
+/* Section van het stuur */
+article section:nth-of-type(1){
+  grid-column-start: 1;
+  grid-row-start: 2;
 }
 
 /* Stuur */
-article > section:nth-of-type(1) img:nth-of-type(3){
-  width: 27.5em;
-
-  position: absolute;
-  top: 81px;
-  left: 57px;
+article section:nth-of-type(1) img:nth-of-type(1){
+  width: 28em;
+  margin-top: 4em;
 }
 
-/* Paneel van de knoppen */
+/* Section van de pook */
+article section:nth-of-type(2){
+  grid-column-start: 2;
+  grid-row-start: 3;
+
+  justify-items: center;
+
+}
+
+/* De versnellingsbak / pook */
+article section:nth-of-type(2) img:nth-of-type(1){
+  width: 6em;
+
+  place-self: center;
+}
 
 
 
-/* Het stuur en de knopjes ernaast */
 
-/* Draaiknoppen op het middelste paneel */
+/* Middenpaneel Ka */
+/* article > img:nth-of-type(2){
+  width: 45em;
 
-/* De versnellingsbak */
-
-
+  position: absolute;
+  top: 4.83em;
+  left: 3.3em;
+} */
