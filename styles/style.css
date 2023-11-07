@@ -82,8 +82,8 @@ article {
 
 /* De stukjes tekst */
 article section:nth-of-type(1){
-	/* Ruimte om de weg te zien */
-  margin-bottom: 5em;
+/* Ruimte om de weg te zien */
+  margin-bottom: 6em;
   width: 100%;
 }
 
@@ -108,7 +108,7 @@ article section:nth-of-type(1) ul li{
 
 /* Voor het verstoppen van het stukje tekst zonder dat de ruimte verdwijnt */
 article section:nth-of-type(1) ul li:first-of-type{
-	/* opacity: 0; */
+	opacity: 0;
 }
 
 /* voor het verstoppen van de andere li's totdat ik ze nodig heb */
@@ -166,7 +166,7 @@ article section:nth-of-type(2) img:nth-of-type(1) {
    }
   
    /* feedback voor de gebruiker */
-   article section:nth-of-type(1) img:nth-of-type(1):hover {
+   article section:nth-of-type(2) img:nth-of-type(1):hover {
 	animation-name: stuurtje;
 	animation-duration: 2s;
 	/* transform-origin:center bottom; */
@@ -195,7 +195,7 @@ article section:nth-of-type(2) img:nth-of-type(2) {
  }
 
  /* feedback voor de gebruiker */
- article section:nth-of-type(1) img:nth-of-type(2):hover {
+ article section:nth-of-type(2) img:nth-of-type(2):hover {
   animation-name: pooky;
   animation-duration: 2s;
   transform-origin:center bottom;

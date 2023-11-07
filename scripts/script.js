@@ -1,6 +1,11 @@
 // JavaScript Document
 console.log("Howdy!");
 
+
+// Voor een geluidje bij het klikken
+
+var audio = new Audio("audio/")
+
 const pook = document.querySelector("article section img:nth-of-type(2)")
 const pookInfo = pook.getBoundingClientRect()
 const fordImages = document.querySelectorAll("img")
