@@ -30,8 +30,6 @@
 *::after,
 *::before {
 	box-sizing: border-box;
-
-  /* border:solid 1px red; */
 }
 
 body {
@@ -217,11 +215,10 @@ article section:nth-of-type(2) img:nth-of-type(2):hover{
 
 /* De versnellingsbak / pook */
 article section:nth-of-type(2) img:nth-of-type(3) {
-	/* grid-row: 2;
-	justify-self: start; */
-
-	width: 20%;
-	translate: -5vw 7vw;
+	position: absolute;
+	width: 8%;
+	translate: 50vw 34vw;
+	transform-origin: top center;
 }
 
  /* bewegen van de pook */
@@ -242,7 +239,7 @@ article section:nth-of-type(2) img:nth-of-type(3) {
  }
 
 
- 
+
  /* De focus voor de interactieve elementen */
 article section:nth-of-type(2) img:focus{
 	filter:	drop-shadow(0 0 .30em);
