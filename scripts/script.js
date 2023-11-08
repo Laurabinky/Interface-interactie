@@ -13,6 +13,7 @@ stuur.addEventListener("click", () => {
 
 
 
+
 //  Navigeren tussen de items
 
 const pook = document.querySelector("article section img:nth-of-type(3)")
