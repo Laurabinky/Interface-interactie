@@ -91,7 +91,6 @@ article section:nth-of-type(1) ul{
   margin:0;
   padding:0;
   width: 100%;
-
 }
 
 article section:nth-of-type(1) ul li{
@@ -103,12 +102,16 @@ article section:nth-of-type(1) ul li{
 
   background-color: var(--bg-tekst);
   border-radius: 3em;
-
 }
 
 /* Voor het verstoppen van het stukje tekst zonder dat de ruimte verdwijnt */
-article section:nth-of-type(1) ul li:first-of-type{
+article section:nth-of-type(1) ul li{
 	opacity: 0;
+}
+
+/* Zichtbaar maken van de li zodra je op het stuur klikt */
+article section:nth-of-type(1) ul li.zichtbaar {
+	opacity: 1;
 }
 
 /* voor het verstoppen van de andere li's totdat ik ze nodig heb */
@@ -121,6 +124,7 @@ article section:nth-of-type(1) ul li:first-of-type{
 	position: absolute;
 	left: -999em;
 }
+
 article section:nth-of-type(1) ul li h3, p{
   color: var(--p-h2-color);
 }
@@ -160,35 +164,45 @@ article section:nth-of-type(2) img:nth-of-type(1) {
 	margin: 12% 15% 0 0;
 }
 
- /* bewegen van het stuur */
- @keyframes stuurtje{
+/* bewegen van het stuur */
+@keyframes stuurtje{
 	0%{
-	  transform:rotate(0);
+		transform:rotate(0);
 	}
 	50%{
 		transform:rotate(35deg);
 	}
 	100%{
-	  transform:rotate(0);
+		transform:rotate(0);
 	}
-   }
+}
   
-   /* feedback voor de gebruiker */
-   article section:nth-of-type(2) img:nth-of-type(1):hover {
+/* feedback voor de gebruiker */
+article section:nth-of-type(2) img:nth-of-type(1):hover{
 	animation-name: stuurtje;
 	animation-duration: 2s;
-	/* transform-origin:center bottom; */
-   }
+}
 
+article section:nth-of-type(2) img:nth-of-type(1):focus{
+	filter: 0 .5 0 red;
+}
+
+/* De radio */
+article section:nth-of-type(2) img:nth-of-type(2){
+	/* grid-row: 1/3; */
+	justify-self: start;
+
+	width: 35%;
+}
 
 
 /* De versnellingsbak / pook */
-article section:nth-of-type(2) img:nth-of-type(2) {
+article section:nth-of-type(2) img:nth-of-type(3) {
 	grid-row: 2;
-	align-self: end;
+	justify-self: start;
 
 	width: 20%;
-	margin: 0 0 0 0;
+	margin: 20% 0 0 0;
 
 }
 
@@ -203,7 +217,7 @@ article section:nth-of-type(2) img:nth-of-type(2) {
  }
 
  /* feedback voor de gebruiker */
- article section:nth-of-type(2) img:nth-of-type(2):hover {
+ article section:nth-of-type(2) img:nth-of-type(3):hover {
   animation-name: pooky;
   animation-duration: 2s;
   transform-origin:center bottom;
