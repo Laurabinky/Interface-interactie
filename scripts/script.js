@@ -72,7 +72,7 @@ if (deltaX > 100 && currentIndex == 1) {
     // Met % geef je aan dat als het aantal groter is dan het aantal wat er is ga je terug naar item 1
     currentIndex = (currentIndex + 1) % timelineItems.length
     // Veranderen van de radio
-    radio.src = "../images/radio2000.png"
+    radio.src = "../images/ouderadio.png"
 
     // Zodat hij opnieuw gaat kijken naar de statement
     showItem()
