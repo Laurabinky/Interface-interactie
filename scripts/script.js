@@ -18,7 +18,6 @@ var cdspeler = document.querySelector("article section:nth-of-type(2) img:nth-of
 
 cdspeler.addEventListener("click", () => {
     muziek.play();
-    console.log("werkt dit")
 });
 
 
