@@ -23,7 +23,7 @@ cdspeler.addEventListener("click", () => {
 
 
 //  Navigeren tussen de items
-
+// Bij dit onderdeel heb ik hulp gehad van Leo, het grootste deel snap ik 
 const pook = document.querySelector("article section img:nth-of-type(3)")
 
 // Dit vertelt mij alles wat ik wil weten van alle kanten van de img
@@ -69,7 +69,7 @@ if (eventOn == false) {
 const currentX = event.clientX
 const deltaX = currentX - initialX
 
-if (deltaX > 170 && currentIndex == 1) {
+if (deltaX > 100 && currentIndex == 1) {
     // Met % geef je aan dat als het aantal groter is dan het aantal wat er is ga je terug naar item 1
     currentIndex = (currentIndex + 1) % timelineItems.length
     // Veranderen van de radio
