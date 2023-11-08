@@ -11,7 +11,15 @@ stuur.addEventListener("click", () => {
     audio.play();
 });
 
+// Voor een muziekje bij het klikken op de radio
 
+var muziek = new Audio("audio/liedje.mp3")
+var cdspeler = document.querySelector("article section:nth-of-type(2) img:nth-of-type(2)");
+
+cdspeler.addEventListener("click", () => {
+    muziek.play();
+    console.log("werkt dit")
+});
 
 
 //  Navigeren tussen de items
@@ -61,11 +69,11 @@ if (eventOn == false) {
 const currentX = event.clientX
 const deltaX = currentX - initialX
 
-if (deltaX > 170 && currentIndex == 2) {
+if (deltaX > 170 && currentIndex == 1) {
     // Met % geef je aan dat als het aantal groter is dan het aantal wat er is ga je terug naar item 1
     currentIndex = (currentIndex + 1) % timelineItems.length
     // Veranderen van de radio
-    radio.src = ""
+    radio.src = "../images/radio2000.png"
 
     // Zodat hij opnieuw gaat kijken naar de statement
     showItem()
@@ -76,11 +84,11 @@ if (deltaX > 170 && currentIndex == 2) {
         eventOn = true
     }, 10000)
     
-} else if (deltaX > 170 && currentIndex == 5) {
+} else if (deltaX > 170 && currentIndex == 4) {
 
     currentIndex = (currentIndex + 1) % timelineItems.length
     // Veranderen van de radio 2
-    radio.src = ""
+    radio.src = "../images/radio.jpg"
 
     // Zodat hij opnieuw gaat kijken naar de statement en de class op de juiste plek zet
     showItem()
@@ -117,6 +125,4 @@ var stuurKlik = document.querySelector("article section:nth-of-type(2) img:nth-o
 
 stuurKlik.addEventListener("click", () => {
     timelineItems[currentIndex].classList.add("zichtbaar")
-
-    console.log("test")
 })
